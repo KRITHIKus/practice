@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JS</h1>
+
+    <script>
+     function Person(id, sname, dob) {
+    this.id = id;
+    this.sname = sname;
+    this.dob = dob;
+}
+
+let p2 = new Person(101, "k", 2000);
+console.log(p2);
+
+
+
+function Car(brand,model,year,age){
+this.brand=brand,
+this.model=model,
+this.year=year
+
+}
+Car.prototype.getDetails = function(){
+    console.log(`brand ${this.brand} , model ${this.model}, year: ${this.year}, Age: ${this.getAge()} `,)
+    
+}
+Car.prototype.getAge=function(){
+    let currentyear=2025;
+    age=currentyear - this.year;
+    return age
+}
+let p1 = new Car("bmw", "s1",2000)
+let p3 = new Car("tata", "s1",1995  )
+p1.getDetails()
+p3.getDetails()
+
+
+
+
+
+
+function student(id,name,marks){
+    this.id=id,
+    this.name=name,
+    this.marks=marks
+}
+student.prototype.getgrade=function(){
+    if(this.marks>=90){
+        return "A"
+    }
+    else if(this.marks>=75){
+        return "B"
+    }
+    else{
+        return "A"
+    }
+}
+student.prototype.passed=function(){
+   return 30<=this.marks
+    
+}
+
+let s1 = new student(1, 'k',76);
+let s2 = new student(1, 'r',90);
+let s3 = new student(1, 'e',21);
+console.log(s1.name,"Grade:",s1.getgrade(), "passed:",s1.passed())
+console.log(s3.name,"Grade:",s3.getgrade(), "passed:",s3.passed())
+
+        </script>
+</body>
+</html>

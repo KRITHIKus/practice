@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="" />
+    <style>
+      .bg {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        margin-top: 10px;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+      .con {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="name1"></p>
+    <input id="names" type="text" oninput="name2()" />
+    <div class="row">
+    <div class="con">
+      
+        <div class="bg" id="b1"></div>
+        <button onclick="bg('b1')">color box 1</button>
+      </div>
+      <div class="con">
+        <div class="bg" id="b2"></div>
+        <button onclick="bg('b2')">color box 2</button>
+      </div>
+      <div class="con">
+        <div class="bg" id="b3"></div>
+        <button onclick="bg('b3')">color box 3</button>
+      </div>
+    </div>
+
+    <script>
+      function name2() {
+        let name = document.getElementById("names").value;
+        document.getElementById("name1").innerHTML = name;
+      }
+      function bg(bid) {
+        let bg1 = "#" + Math.floor(Math.random() * 16777215).toString();
+        document.getElementById(bid).style.background = bg1;
+      }
+    </script>
+  </body>
+</html>

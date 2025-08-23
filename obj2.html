@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function Person(id,name,dob){
+this.id=id,
+this.name=name,
+this.dob=dob
+    }
+function student(id,name,dob,course,section,marks){
+    Person.call(this,id,name,dob);
+    this.course=course,
+    this.section=section
+    this.marks=marks
+    
+}
+student.prototype=Object.create(Person.prototype);
+student.prototype.constructor=student
+
+student.prototype.getgrade=function(){
+    if (this.marks >=90){
+        return "A"
+    }
+    else if(this.marks >=75){
+        return "B"
+    }
+    else {
+        return "c"
+    }
+}
+
+function teacher(id,name,dob,desg,sal){
+    Person.call(this,id,name,dob);
+    this.desg=desg,
+    this.sal=sal
+}
+teacher.prototype=Object.create(Person.prototype);
+teacher.prototype.constructor=teacher
+
+
+student.prototype.getstd=function(){
+    
+    console.log(`id: ${this.id}, name: ${this.name} , dob: ${this.dob}, course: ${this.course}, section: ${this.section},Marks: ${this.getgrade()}`)
+}
+teacher.prototype.gettea=function(){
+    
+    console.log(`id: ${this.id}, name: ${this.name} , dob: ${this.dob}, desg: ${this.desg}, sal: ${this.sal}`)
+}
+
+
+
+
+let s1 = new student(101,"k",2000,"bca","b",75)
+let s2 = new student(102,"kr",2000,"bca","d",54)
+let t1 = new teacher(101,"kc",1900,"ass prof",20000)
+console.log(s1)
+s1.getstd()
+t1.gettea()
+
+</script>
+
+
+
+</body>
+</html>

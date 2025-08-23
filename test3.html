@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Claculation </h1>
+    <p id="p1"><span>ANSWER :</span> </p>
+    <label  for="ipt">ENTER A NUMBER: </label>
+    <input type="text" id="ipt" name="ip">
+
+    <button onclick="fact()">click for factorial</button>
+    <button onclick="fibon()">click for fibonnacci  </button>
+    <button onclick="even()">click for even or odd check</button>
+    <button onclick="palindrome()">click for palindrome check</button>
+    <button onclick="factS()">click for generate factorial series</button>
+    <button onclick="reverse()">click for reverse a number</button>
+
+    <script>
+      
+      function fact(){
+        let in1 = parseInt(document.getElementById('ipt').value);
+        let para =document.getElementById('p1')
+        let res=1
+        for (i=1;i<=in1;i++){
+            res *=i
+        }
+        
+      para.textContent=`answer : ${res}`
+      }
+
+      function fibon() 
+      {
+        let f1 = parseInt(document.getElementById('ipt').value);
+        let para =document.getElementById('p1');
+
+        function per(x){
+          s =Math.floor(Math.sqrt(x))
+          return s * s === x;
+        }
+        function isfib(){
+          return per(5 * f1 * f1 -4) || per(5 * f1 * f1 -4)
+        }
+        let res = isfib() ?  `${f1} is fibonaci ` : `${f1} is not a fibon`;
+        para.textContent=res
+      }
+      const even=()=>{
+         let e1 = parseInt(document.getElementById('ipt').value);
+        let para =document.getElementById('p1');
+
+        let res = (e1 %2===0) ? `${e1} is even` : `${e1} is odd`;
+        para.textContent=res
+      }
+
+      const palindrome = ()=>{
+
+         let p1 =document.getElementById('ipt').value.trim();
+        let para =document.getElementById('p1');
+
+        let normal = p1.replace(/\s+/g,'').toLowerCase();
+
+        let rev = normal.split('').reverse().join('');
+
+        let res = (normal === rev) ? `${p1} is palindrome` : `${p1} not a palindrome`
+
+        para.textContent=`answer ${res}`
+      }
+      const factS = ()=>{
+         let p1 =parseInt(document.getElementById('ipt').value);
+        let para =document.getElementById('p1');
+        let arr =[]
+        let res =1 
+        for (let i =1;i<=p1;i++){
+          res *= i
+          arr.push(`${i}! is ${res}`)
+        }
+       para.innerHTML=arr.join('<br>')
+      }
+
+      const reverse = ()=>{
+         let p1 =document.getElementById('ipt').value;
+        let para =document.getElementById('p1');
+        
+       let arr =[];
+        for (let i=p1.length - 1;i >=0;i--){
+          arr.push(p1[i])
+        }
+        para.textContent=arr.join('')
+      }
+    </script>
+</body>
+</html>
