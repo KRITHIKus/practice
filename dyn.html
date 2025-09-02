@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container mt-5 mb-5">
+      <div class="row" id="prod">
+        
+       
+       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+let dis= document.getElementById('prod')
+let products={
+    products1:{
+name:"Xiaomi TV",
+desc:` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, voluptatibus.` ,
+price:29000  ,
+dis:41,
+rprice:49000,
+qty:2179
+    },
+     products2:{
+name:"Samsung TV",
+desc:` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, voluptatibus.` ,
+price:23000  ,
+dis:10,
+rprice:49000,
+qty:121
+    }
+ 
+}
+let content=""
+for (let key in products){
+ 
+let p =products[key]
+
+content+=`
+  <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <img
+                src="https://m.media-amazon.com/images/I/71HI+VF6ZXL._AC_CR0%2C0%2C0%2C0_SX352_SY330_.jpg"
+                class="img-fluid p-3"
+              />
+            </div>
+            <div class="card-body">
+              <h1>${p.name}</h1>
+              <p>
+                ${p.desc}
+              </p>
+              <p class="d-flex gap-1" style="font-size: medium">
+                
+                <span class="" style="color: rgb(165, 167, 167)"> ${p.qty}</span>
+              </p>
+              <div class="d-flex gap-2">
+                <h3 class="text-danger">${p.dis}%</h3>
+                <h3 class="price" >${p.price}</h3>
+              </div>
+              <button class="btn btn-danger btn-sm">Limited Deal</button><br />
+              <span class="d-fex"
+                >M.R.P.:
+                <span class="text-decoration-line-through"> ${p.rprice}</span>
+              </span>
+              <span class="d-fex"
+                >You Save:
+                <span class="text-success ">₹${p.rprice - p.price} </span>
+               
+            </div>
+            <div class=" d-flex justify-content-center gap-3">
+
+             <button class="btn btn-secondary btn-sm dec">-</button>
+                <span class="border border-2 p-1 rounded quantity">1
+                  </span>
+                <button class="btn btn-secondary btn-sm inc">+</button>
+                <h4 class="sprice" data-base="${p.price}">₹${p.price}</h4>
+                </div>
+            <div class="div card-footer text-center d-flex justify-content-center mt-3 p-3 gap-3">
+              <div class="button btn btn-warning btn-sm cart" >Add to Cart</div>
+              <div class="button btn btn-success btn-sm">Buy Now</div>
+            </div>
+          </div>
+         
+        </div>
+`}
+        dis.innerHTML=content
+
+        let c=document.querySelectorAll('.cart')
+
+     
+        c.forEach((c1)=>{
+        c1.addEventListener("click",function(){
+          if(c1.textContent==="Add to Cart"){
+            alert("Item Added in Cart")
+          c1.textContent="Added to Cart"
+          c1.classList.remove("btn-warning")
+           c1.classList.add("btn-success")}
+            else{
+               c1.textContent="Add to Cart"
+           alert("Item Already in Cart")
+           c1.classList.remove("btn-success")
+           c1.classList.add("btn-warning")
+          }
+        })
+      })
+
+   let incb=document.querySelectorAll('.inc')
+        let decb=document.querySelectorAll('.dec')
+        let quantity=document.querySelectorAll('.quantity')
+        let priceels=document.querySelectorAll('.sprice')
+
+      incb.forEach((inc1,i)=>{
+        
+            let decbn = decb[i];
+            let qty = quantity[i];
+            let pr = priceels[i];
+
+            let q = 1;
+            let base=parseInt(pr.dataset.base);
+
+            inc1.addEventListener("click",function(){
+                q++;
+                qty.textContent=q;
+                pr.textContent=`₹${base*q}`
+            })
+       decbn.addEventListener("click",function(){
+        if(q>1){
+            q--;
+            qty.textContent=q;
+            pr.textContent=`₹${base*q}`
+        }
+      })
+      })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">header one </h1>
+    <p class="p1">1paragraph</p>
+    <p class="p1">2paragraph</p>
+    <ul>
+        <li class="li">a</li>
+        <li class="li">b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+
+    <script>
+        let doc1 =document.getElementById('h1')
+        console.log(doc1)
+
+        let doc2=document.getElementsByClassName('p1')
+         console.log(doc2)
+
+         let doc3 = document.querySelector('li').textContent
+          console.log(doc3)
+
+          let doc4 = document.querySelectorAll('.li')
+         doc4.forEach(element => 
+            console.log(element.textContent)
+         );
+    </script>
+</body>
+</html>

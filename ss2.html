@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>document</title>
+  <style>
+    .active {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>WEBSTORAGE SESSION STORAGE</h2>
+  <button id="likeBtn">👍 Like (<span id="likesCount">0</span>)</button>
+  <button id="dislikeBtn">👎 Dislike (<span id="dislikesCount">0</span>)</button>
+  <p>Total Reactions: <span id="totalCount">0</span></p>
+  <button id="reset">reset</button>
+ 
+
+  <script>
+    let likes = parseInt(sessionStorage.getItem("likes")) || 0;
+    let dislikes = parseInt(sessionStorage.getItem("dislikes")) || 0;
+    let userReaction = null;
+
+    const likeBtn = document.getElementById("likeBtn");
+    const dislikeBtn = document.getElementById("dislikeBtn");
+    const likesCount = document.getElementById("likesCount");
+    const dislikesCount = document.getElementById("dislikesCount");
+    const totalCount = document.getElementById("totalCount");
+    const resetBtn = document.getElementById('reset')
+
+    function updateCounts() {
+      likesCount.textContent = likes;
+      dislikesCount.textContent = dislikes;
+      totalCount.textContent = likes + dislikes;
+
+      // Save to sessionStorage
+      sessionStorage.setItem("likes", likes);
+      sessionStorage.setItem("dislikes", dislikes);
+    }
+
+    likeBtn.addEventListener("click", function () {
+      if (userReaction === "like") {
+        likes--;
+        userReaction = null;
+        likeBtn.classList.remove("active");
+      } else {
+        likes++;
+        likeBtn.classList.add("active");
+        if (userReaction === "dislike") {
+          dislikes--;
+          dislikeBtn.classList.remove("active");
+        }
+        userReaction = "like";
+      }
+      updateCounts();
+    });
+
+    dislikeBtn.addEventListener("click", function () {
+      if (userReaction === "dislike") {
+        dislikes--;
+        userReaction = null;
+        dislikeBtn.classList.remove("active");
+      } else {
+        dislikes++;
+        dislikeBtn.classList.add("active");
+        if (userReaction === "like") {
+          likes--;
+          likeBtn.classList.remove("active");
+        }
+        userReaction = "dislike";
+      }
+      updateCounts();
+    });
+  resetBtn.addEventListener("click", function () {
+      likes = 0;
+      dislikes = 0;
+      userReaction = null;
+
+      sessionStorage.removeItem("likes");
+      sessionStorage.removeItem("dislikes");
+
+      likeBtn.classList.remove("active");
+      dislikeBtn.classList.remove("active");
+
+      
+      updateCounts();
+    });
+   
+    updateCounts();
+  </script>
+</body>
+</html>

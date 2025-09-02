@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    #count { font-size: 2em; margin: 20px; }
+    button { padding: 10px 20px; font-size: 1em; margin: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Counter</h1>
+  <div id="count">0</div>
+  <button id="increase">➕ Increase</button>
+  <button id="decrease">➖ Decrease</button>
+  <button id="reset">🔄 Reset</button>
+
+  <script>
+    let count = 0;
+    const countEl = document.getElementById("count");
+
+    document.getElementById("increase").addEventListener("click", () => {
+      count++;
+      countEl.textContent = count;
+    });
+
+    document.getElementById("decrease").addEventListener("click", () => {
+        if(count>0){
+count--;
+        }
+      
+      countEl.textContent = count;
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      count = 0;
+      countEl.textContent = count;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      .box1 {
+        border: 2px solid black;
+        margin: 0;
+        width: max-content;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        text-align: center;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+     
+    <div class="box1">
+      <h1 id="text1">0</h1>
+      <button id="b1" onclick="count(5)">+5</button>
+      
+      <button id="b2" onclick="count(1)">+1</button>
+ 
+      <button id="b3" onclick="count(-1)">-1</button>
+      
+      <button id="b4" onclick="count(-5)">-5</button>
+      <button id="b4" onclick="count(100)">+100</button>
+      <button id="b4" onclick="count(-100)">-100</button>
+    </div>
+
+    <div class="card">
+      <h2>Product</h2>
+      <p>Price: $<span id="price">100</span></p>
+      <p>Qty: <span id="qty">1</span></p>
+      <p>Total: $<span id="total">100</span></p>
+      <button id="plus">+</button>
+      <button id="minus">-</button>
+    </div>
+    <script>
+      let count1 = 0;
+      const txt=document.getElementById('text1');
+      function count(value) {
+        if( count1 + value >= 0){
+          count1 += value;
+          txt.textContent=count1
+        }
+      }
+
+      let qty = 1,
+        price = 100;
+      const qtyEl = document.getElementById("qty");
+      const totalEl = document.getElementById("total");
+      document.getElementById("plus").addEventListener("click", () => {
+        qty++;
+        qtyEl.textContent = qty;
+        totalEl.textContent = qty * price;
+      });
+      document.getElementById("minus").addEventListener("click", () => {
+        if (qty > 1) {
+          qty--;
+          qtyEl.textContent = qty;
+          totalEl.textContent = qty * price;
+        }
+      });
+    </script>
+  </body>
+</html>

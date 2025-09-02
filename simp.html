@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="b">
+        <div id="b1"></div>
+        <button id="btn"></button>
+    </div>
+    <script>
+       let dis = document.getElementById('b1')
+       let count = 0
+         
+          let cont = `<p id="txt"></p>`
+ dis.innerHTML=cont
+        let txt1 =document.getElementById('txt')
+        let btn1 = document.getElementById('btn')
+       
+        
+function fn(){
+    txt1.textContent = count
+}
+        btn1.addEventListener("click",function(){
+count++;
+fn()
+        })
+
+        
+        
+       
+    </script>
+</body>
+</html>
