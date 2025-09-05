@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList Demo</title>
+  <style>
+    /* Initial box style */
+    #box {
+      width: 200px;
+      height: 200px;
+ 
+
+      transition: all 0.3s ease;
+    }
+
+    /* New styles to toggle */
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .big {
+      transform: scale(1.5);
+    }
+    .rotate {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box" class="red"></div>
+  <button onclick="toggleBox()">Toggle Box Style</button>
+
+  <script>
+    function toggleBox() {
+      const box = document.getElementById("box");
+
+      // Toggle between green and blue
+      box.classList.toggle("green");
+      box.classList.toggle("blue");
+
+      // Toggle big and rotate styles
+      box.classList.toggle("big");
+      box.classList.toggle("rotate");
+
+      // Log the current class list
+      console.log(box.classList);
+    }
+  </script>
+  
+</body>
+</html>
