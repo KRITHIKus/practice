@@ -11,8 +11,11 @@
             background-color: rgb(236, 235, 235);
         }
         .card-body {
+            height: 200px;
+        }
+        .card-footer {
             position: relative;
-            height: 110px;
+            height: 50px;
         }
 
         .moving-box {
@@ -44,6 +47,9 @@
                 <button class="btn btn-danger" id="btn3">STEP 3</button>
             </div>
             <div class="card-body">
+ <p id="txt2" class="text-xl-center text-dark text-uppercase mt-5" style="font-size: 40px;">step1</p>
+            </div>
+            <div class="card-footer">
                 <div id="box" class="moving-box">
                     <p id="txt" class="text-xl-center text-white text-uppercase">step1</p>
                 </div>
@@ -58,7 +64,7 @@
         function moveBox(button) {
             var box = document.getElementById("box");
             var buttonLeft = button.offsetLeft;  
-              
+              let txt2 = document.getElementById("txt2");
 
             var buttonWidth = button.offsetWidth;  
             var boxWidth = box.offsetWidth;        
@@ -69,16 +75,19 @@
 let txt = document.getElementById("txt");
         document.getElementById("btn1").addEventListener("click", function () {
             txt.textContent="step1";
+            txt2.textContent="step1";
             moveBox(this);  
         });
 
         document.getElementById("btn2").addEventListener("click", function () {
             txt.textContent="step2";
+            txt2.textContent="step2";
             moveBox(this);  
         });
 
         document.getElementById("btn3").addEventListener("click", function () {
             txt.textContent="step3";
+            txt2.textContent="step3";
             moveBox(this);  
         });
     </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt" placeholder="enter something" name="text"/>
+    <button type="submit" id="btn">click</button>
+    <p id="inp"></p>
+<script>
+    let btn=document.getElementById('btn');
+    let txt=document.getElementById('txt');
+    let inp=document.getElementById('inp');
+
+    btn.addEventListener('click', function(e){
+e.preventDefault();
+
+let data = {
+    text:txt.value
+}
+inp.textContent = `you entered ${data.text}`;
+    });
+
+  
+
+</script>
+</body>
+</html>

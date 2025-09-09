@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="dec">decrease</button>
+    <p id="txt">0</p>
+    <button id="inc">increase</button>
+
+    <script>
+        let count = parseInt(localStorage.getItem("count")) || 0;
+        const txt = document.getElementById("txt");
+        const inc = document.getElementById("inc");
+        const dec = document.getElementById("dec");
+
+        function updateDisplay() {
+            txt.textContent = count;
+            localStorage.setItem("count", count);
+        }
+
+        inc.addEventListener("click", function() {
+  count++;
+           
+            updateDisplay();
+        });
+
+        dec.addEventListener("click", function() {
+           if(count > 0){
+count--;}
+            updateDisplay();
+      }  );
+
+        // Initialize display on page load
+        updateDisplay();
+    </script>
+</body>
+</html>
