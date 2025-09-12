@@ -9,10 +9,21 @@
     <h1 id="texts"></h1>
     <button id="btn1" onclick="btn1()">hiall</button>
     <button id="btn2" onclick="btn2()">vazthkal</button>
-    <button id="btn3" onclick="btn3()">when</button>
+    <button id="btn3" >when</button>
     <script>
          var txt = document.getElementById('texts')
-
+let b3 =document.getElementById('btn3')
+document.addEventListener('keydown',()=>{
+console.log(event.key)
+switch(event.key)
+{
+  case  'ArrowUp':
+    txt.textContent=Number(txt.textContent)+1
+    break;
+    case  'ArrowDown':  
+    txt.textContent=Number(txt.textContent)-1
+    break;
+}})
        function btn1(){
         
          txt.textContent='Hi All'
