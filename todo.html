@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>TOdo</h1>
+    </div>
+    <label for="tasks">enter task: </label>
+    <input type="text" placeholder="enter task" id="tasks" />
+    <button id="btn">Enter</button>
+    <div id="dis"></div>
+    <script>
+      let dis = document.getElementById("dis");
+      let btn = document.getElementById("btn");
+      let inp = document.getElementById("tasks");
+let edit = -1
+      let tasklists = JSON.parse(localStorage.getItem("tasks")) || [
+        { tasks: "reading" },
+        { tasks: "playing" },
+        { tasks: "gaming" },
+      ];
+
+      function display() {
+        let cont = `<table border="1" >
+    <tr >
+        <th>slno</th>
+        <th>tasks</th>
+        <th>edit</th>
+    </tr>`;
+
+        tasklists.forEach((s, index) => {
+          cont += `
+  
+    <tr>
+        <td>${index + 1}</td>
+        <td>${s.tasks}</td>
+        <td>
+            <button class="update" id="${index}">🖊️</button>
+            <button class="delete" id="${index}">❌</button>
+            </td>
+    </tr>
+    
+`;
+        });
+        cont += `</table>`;
+        dis.innerHTML = cont;
+
+          document.querySelectorAll('.delete').forEach((btn)=>{
+        btn.addEventListener("click",function(){
+            const index=Number(this.getAttribute('id'))
+            tasklists.splice(index,1)
+            save()
+            display()
+        })
+     })
+     document.querySelectorAll('.update').forEach((btn)=>{
+        btn.addEventListener("click",function(){
+            edit = Number (this.getAttribute('id'))
+            inp.value= tasklists[edit].tasks
+        })
+     })
+      }
+     
+      function save(){
+localStorage.setItem('tasks',JSON.stringify(tasklists))
+      }
+
+ display();
+
+      btn.addEventListener("click", function () {
+        if (inp.value.trim() !== "") {
+            if(edit === -1){
+  tasklists.push({ tasks: inp.value.trim() });
+            }else{
+                tasklists[edit].tasks=inp.value.trim();
+                edit= -1
+            }
+        save()
+          display();
+          inp.value = ""; 
+        } else {
+          alert("enter tasks");
+        }
+      });
+    
+
+   
+    </script>
+  </body>
+</html>
