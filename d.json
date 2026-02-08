@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "isActive": true,
+    "roles": ["admin", "editor"],
+    "profile": {
+      "age": 30,
+      "country": "USA"
+    },
+    "createdAt": "2026-01-28T10:15:30Z"
+  },
+  {
+    "id": 102,
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "isActive": true,
+    "roles": ["editor"],
+    "profile": {
+      "age": 28,
+      "country": "Canada"
+    },
+    "createdAt": "2026-01-27T09:05:10Z"
+  },
+  {
+    "id": 103,
+    "name": "Michael Brown",
+    "email": "michael.brown@example.com",
+    "isActive": false,
+    "roles": ["viewer"],
+    "profile": {
+      "age": 35,
+      "country": "UK"
+    },
+    "createdAt": "2026-01-26T14:45:00Z"
+  },
+  {
+    "id": 104,
+    "name": "Emily Davis",
+    "email": "emily.davis@example.com",
+    "isActive": true,
+    "roles": ["admin"],
+    "profile": {
+      "age": 32,
+      "country": "Australia"
+    },
+    "createdAt": "2026-01-25T11:20:40Z"
+  },
+  {
+    "id": 105,
+    "name": "Carlos Martinez",
+    "email": "carlos.martinez@example.com",
+    "isActive": true,
+    "roles": ["editor", "viewer"],
+    "profile": {
+      "age": 29,
+      "country": "Spain"
+    },
+    "createdAt": "2026-01-24T08:10:55Z"
+  }
+]
