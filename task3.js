@@ -26,7 +26,7 @@ function tar(arr,n){
    
     return null
 }
-console.log(tar([2,7,3,11,1],3))
+//console.log(tar([2,7,3,11,1],3))
 
 let seen={}
 function count(arr){
@@ -45,7 +45,7 @@ let res=[]
     return res
 }
 
-//console.log(count([4,3,2,7,8,3,2,1]))
+console.log(count([4,3,2,7,8,3,2,1]))
 
 function count2(arr){
     let res=[];
@@ -62,7 +62,7 @@ function count2(arr){
     }
     return res
 }
-console.log(count2([4,3,2,7,2,8,3,2,1]))
+//console.log(count2([4,3,2,7,2,8,3,2,1]))
 
 
 function dup(arr){
