@@ -163,9 +163,10 @@ myPromiseAll([p1, p2, p3])
 
     for(let i=0;i<arr.length;i++){
         if(Array.isArray(arr[i])){
-           let faltArray=flatten(arr[i])
-        for(let j=0;j<faltArray.length;j++){
-            res[res.length]=faltArray[j]
+           let faltArray=arr[i]
+           let falt= faltArray
+        for(let j=0;j<falt.length;j++){
+            res[res.length]=falt[j]
         }
         }else{
             res[res.length]=arr[i]
@@ -176,3 +177,5 @@ myPromiseAll([p1, p2, p3])
   }
 
 console.log(flatten([1, [2, [3, 4]], 5]))
+
+
