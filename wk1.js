@@ -20,3 +20,19 @@ let seen={1:2,2:3,4:1}
 seen[1]=67
 console.log(seen[1])
 
+
+function deb(fn,delay){
+    let handler;
+    return function(){
+        clearTimeout(handler)
+        handler=setTimeout(() => {
+            fn()
+        }, delay);
+    }
+}
+
+let search=deb(function(){
+    console.log("text: 500 sec")
+},500)
+search()
+search()
