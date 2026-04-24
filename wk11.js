@@ -59,3 +59,15 @@ function pali(str){
 }
 
 console.log(pali("A man a plan a canal Panama"))
+
+
+function clos(){
+    let count=1
+    return function(){
+        return count++
+    }
+}
+let c1=clos()
+console.log(c1())
+console.log(c1())
+console.log(c1())
