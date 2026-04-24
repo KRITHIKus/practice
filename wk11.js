@@ -20,7 +20,7 @@ function substr(str){
     }
     return {seen,maxlen}
 }
-console.log(substr("abababcdef"))
+//console.log(substr("abababcdef"))
 
 
 function movezeroes(arr){
@@ -40,4 +40,22 @@ function movezeroes(arr){
     
     return arr
 }
-console.log(movezeroes([0,1,6,2,0,9,3,0]))
+//console.log(movezeroes([0,1,6,2,0,9,3,0]))
+
+
+function pali(str){
+    let cstr=str.toLowerCase().replace(/\s+/g,"")
+    let right=cstr.length-1
+    let left=0
+
+    while(left<right){
+        if(cstr[left]!==cstr[right]){
+            return "not palindrome"
+        }
+        left++;
+        right--;
+    }
+    return str+" :is palindrome"
+}
+
+console.log(pali("A man a plan a canal Panama"))
