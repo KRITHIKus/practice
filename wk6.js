@@ -187,15 +187,7 @@ console.log(substring("abcabcbb"));
 function arrRotate(arr,k){
     let n=arr.length;
     k=k%n
-    function reverse(start,end){
-        while(start<end){
-            let temp=arr[start];
-            arr[start]=arr[end];
-            arr[end]=temp;
-            start++;
-            end--
-        }
-    }
+
     reverse(0,n-1)
     reverse(0,k-1)
     reverse(k,n-1)
@@ -203,3 +195,6 @@ function arrRotate(arr,k){
     return arr
 }
 console.log(arrRotate([1,2,3,4,5],3))
+
+let arr=[1,2,3,4,5]
+console.log(arr.length)

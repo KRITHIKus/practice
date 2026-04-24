@@ -58,4 +58,4 @@ function cube(a,b){
     }
     return sum
 }
-console.log(cube(4,9))
+console.log(cube(1,3))
