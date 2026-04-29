@@ -20,7 +20,7 @@ function substr(str){
     }
     return {seen,maxlen}
 }
-//console.log(substr("abababcdef"))
+console.log(substr("abababcdef"))
 
 
 function movezeroes(arr){
