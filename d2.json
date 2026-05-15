@@ -1,0 +1,326 @@
+{
+    
+    "data": {
+        "_id": "69f5fd816039c90fc1e8d440",
+        "user": "69e397fd4c6147488a51ea7c",
+        "title": "Budget Gaming Build",
+        "description": "Entry-level 1080p gaming setup",
+        "parts": {
+            "cpu": {
+                "_id": "69e4c8406a81809a5f89c4a1",
+                "type": "CPU",
+                "brand": "Intel",
+                "model": "Core i3-12100F",
+                "name": "Intel Core i3-12100F",
+                "description": "Budget quad-core for entry builds",
+                "imageUrl": "https://placehold.co/600x400?text=i3-12100F",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "budget",
+                    "intel"
+                ],
+                "specs": {
+                    "cores": 4,
+                    "threads": 8,
+                    "baseClock": 3.3,
+                    "boostClock": 4.3,
+                    "tdp": 58,
+                    "socket": "LGA1700",
+                    "architecture": "Alder Lake",
+                    "lithography": "Intel 7",
+                    "l3Cache": "12MB",
+                    "integratedGraphics": false
+                },
+                "compatibility": {
+                    "socket": "LGA1700",
+                    "chipsets": [
+                        "H610",
+                        "B660",
+                        "B760"
+                    ],
+                    "maxRamSpeed": 3200,
+                    "ramType": "DDR4"
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.730Z",
+                "updatedAt": "2026-04-19T12:19:12.730Z"
+            },
+            "gpu": {
+                "_id": "69e4c8406a81809a5f89c4ab",
+                "type": "GPU",
+                "brand": "AMD",
+                "model": "RX 6500 XT",
+                "name": "AMD Radeon RX 6500 XT 4GB",
+                "description": "Entry-level 1080p gaming GPU",
+                "imageUrl": "https://placehold.co/600x400?text=RX+6500XT",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "budget",
+                    "1080p"
+                ],
+                "specs": {
+                    "vram": 4,
+                    "vramType": "GDDR6",
+                    "baseClock": 2310,
+                    "boostClock": 2815,
+                    "tdp": 107,
+                    "busWidth": 64,
+                    "displayOutputs": [
+                        "HDMI",
+                        "DP"
+                    ],
+                    "length": 180
+                },
+                "compatibility": {
+                    "powerConnectors": [
+                        "6-pin"
+                    ],
+                    "recommendedPSU": 400,
+                    "pcieSlot": "PCIe 4.0",
+                    "slotWidth": 2
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.731Z",
+                "updatedAt": "2026-04-19T12:19:12.731Z"
+            },
+            "ram": {
+                "_id": "69e4c8406a81809a5f89c4b1",
+                "type": "RAM",
+                "brand": "Corsair",
+                "model": "Vengeance LPX 16GB",
+                "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4 3200",
+                "description": "Low-profile DDR4 kit for compact builds",
+                "imageUrl": "https://placehold.co/600x400?text=Vengeance+LPX",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "ddr4",
+                    "low-profile",
+                    "midrange"
+                ],
+                "specs": {
+                    "capacity": 16,
+                    "modules": 2,
+                    "speed": 3200,
+                    "type": "DDR4",
+                    "casLatency": 16,
+                    "voltage": 1.35,
+                    "formFactor": "DIMM"
+                },
+                "compatibility": {
+                    "ramType": "DDR4",
+                    "ecc": false,
+                    "xmp": true,
+                    "expo": false
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.731Z",
+                "updatedAt": "2026-04-19T12:19:12.731Z"
+            },
+            "motherboard": {
+                "_id": "69e4c8406a81809a5f89c4bd",
+                "type": "Motherboard",
+                "brand": "Gigabyte",
+                "model": "H610M S2H",
+                "name": "Gigabyte H610M S2H DDR4",
+                "description": "Entry-level LGA1700 motherboard",
+                "imageUrl": "https://placehold.co/600x400?text=H610M",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "intel",
+                    "ddr4",
+                    "budget"
+                ],
+                "specs": {
+                    "formFactor": "Micro-ATX",
+                    "chipset": "H610",
+                    "ramSlots": 2,
+                    "maxRam": 64,
+                    "m2Slots": 1,
+                    "sataSlots": 4,
+                    "pcie5": false,
+                    "usb32Gen2": false,
+                    "wifi": false,
+                    "bluetooth": false
+                },
+                "compatibility": {
+                    "socket": "LGA1700",
+                    "ramType": "DDR4",
+                    "maxRamSpeed": 3200,
+                    "cpuBrands": [
+                        "Intel"
+                    ]
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.732Z",
+                "updatedAt": "2026-04-19T12:19:12.732Z"
+            },
+            "storage": [
+                {
+                    "_id": "69e4c8406a81809a5f89c4c0",
+                    "type": "Storage",
+                    "brand": "WD",
+                    "model": "Blue SN570 500GB",
+                    "name": "WD Blue SN570 500GB NVMe SSD",
+                    "description": "Reliable entry-level NVMe SSD for everyday use",
+                    "imageUrl": "https://placehold.co/600x400?text=SN570+500GB",
+                    "estimatedPrice": 0,
+                    "currency": "INR",
+                    "inStock": true,
+                    "tags": [
+                        "nvme",
+                        "budget",
+                        "500gb"
+                    ],
+                    "specs": {
+                        "capacity": 500,
+                        "type": "SSD",
+                        "formFactor": "M.2",
+                        "interface": "NVMe",
+                        "readSpeed": 3500,
+                        "writeSpeed": 2300,
+                        "nandType": "TLC",
+                        "tbw": 300
+                    },
+                    "compatibility": {
+                        "interface": "NVMe",
+                        "formFactor": "M.2"
+                    },
+                    "__v": 0,
+                    "createdAt": "2026-04-19T12:19:12.732Z",
+                    "updatedAt": "2026-04-19T12:19:12.732Z"
+                }
+            ],
+            "psu": {
+                "_id": "69e4c8406a81809a5f89c4c8",
+                "type": "PSU",
+                "brand": "Corsair",
+                "model": "CV450",
+                "name": "Corsair CV450 450W",
+                "description": "Entry-level PSU for basic builds",
+                "imageUrl": "https://placehold.co/600x400?text=CV450",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "budget",
+                    "450w"
+                ],
+                "specs": {
+                    "wattage": 450,
+                    "efficiency": "80+ Bronze",
+                    "modular": false,
+                    "fanSize": 120,
+                    "atx3": false,
+                    "pcie5Connector": false
+                },
+                "compatibility": {
+                    "formFactor": "ATX",
+                    "length": 140
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.732Z",
+                "updatedAt": "2026-04-19T12:19:12.732Z"
+            },
+            "cabinet": {
+                "_id": "69e4c8406a81809a5f89c4cf",
+                "type": "Cabinet",
+                "brand": "Zebronics",
+                "model": "Zeb-Spectrum",
+                "name": "Zebronics Zeb-Spectrum Mid Tower",
+                "description": "Affordable RGB cabinet for entry builds",
+                "imageUrl": "https://placehold.co/600x400?text=Zeb-Spectrum",
+                "estimatedPrice": 0,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "budget",
+                    "rgb",
+                    "mid-tower"
+                ],
+                "specs": {
+                    "formFactor": "Mid Tower",
+                    "supportedMotherboards": [
+                        "ATX",
+                        "Micro-ATX"
+                    ],
+                    "maxGpuLength": 290,
+                    "maxCpuCoolerHeight": 155,
+                    "driveBays35": 2,
+                    "driveBays25": 2,
+                    "fanSlots": 4,
+                    "radiatorSupport": [
+                        "240mm"
+                    ],
+                    "includedFans": 3,
+                    "frontIO": [
+                        "USB 3.0",
+                        "USB 2.0"
+                    ]
+                },
+                "compatibility": {
+                    "psuFormFactor": "ATX",
+                    "maxPsuLength": 150
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:19:12.733Z",
+                "updatedAt": "2026-04-19T12:19:12.733Z"
+            },
+            "cooling": {
+                "_id": "69e4cf4415ff80f2baa6cbc6",
+                "type": "Cooling",
+                "brand": "Deepcool",
+                "model": "GAMMAXX 400 V2",
+                "name": "Deepcool GAMMAXX 400 V2 Air Cooler",
+                "description": "Budget air cooler for entry-level and mid-range CPUs",
+                "imageUrl": "https://placehold.co/600x400?text=GAMMAXX+400+V2",
+                "estimatedPrice": 1500,
+                "currency": "INR",
+                "inStock": true,
+                "tags": [
+                    "budget",
+                    "air",
+                    "compact"
+                ],
+                "specs": {
+                    "type": "Air",
+                    "fans": 1,
+                    "fanSize": 120,
+                    "height": 155,
+                    "tdpRating": 150,
+                    "heatpipes": 4,
+                    "noiseLevel": 27
+                },
+                "compatibility": {
+                    "sockets": [
+                        "AM4",
+                        "AM5",
+                        "LGA1700"
+                    ],
+                    "maxRamHeight": 45
+                },
+                "__v": 0,
+                "createdAt": "2026-04-19T12:49:08.789Z",
+                "updatedAt": "2026-04-19T12:49:08.789Z"
+            }
+        },
+        "totalEstimatedPrice": 42000,
+        "currency": "INR",
+        "source": "manual",
+        "journeyStatus": "completed",
+        "isFavorite": false,
+        "isDreamBuild": false,
+        "compatibilityResult": null,
+        "isFeatured": true,
+        "__v": 0,
+        "createdAt": "2026-05-02T13:34:57.169Z",
+        "updatedAt": "2026-05-02T13:34:57.169Z"
+    }
+}

@@ -57,7 +57,6 @@ let cstr=str.toLowerCase().replace(/\s+/g," ")
     let currlen=i-start+1
     maxlen=Math.max(maxlen,currlen)
     bestStart=start
-
    
   }
    let longeststr=""
@@ -67,3 +66,15 @@ let cstr=str.toLowerCase().replace(/\s+/g," ")
 }
 console.log(substr("abbabaabcdefhj"))
 
+function misingdidgit(arr){
+  let n=arr.length
+  let expectedsum=(n*(n+1))/2
+  
+  let actualsum=0
+  for(let i of arr){
+    d1.js
+    
+  }
+  return {sum:expectedsum-actualsum,actualsum,expectedsum}
+}
+console.log(misingdidgit([0,1,3]))
